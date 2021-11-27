@@ -1,8 +1,8 @@
 <template>
-  <Fragment>
+  <div>
     <Tutorial/>
     <h2>{{ alpha.demo }}</h2>
-  </Fragment>
+  </div>
 </template>
 
 <script setup>
@@ -11,7 +11,7 @@ import { Fragment } from 'vue-fragment'
 import Tutorial from '~/components/Tutorial.vue';
 
 const alpha = reactive({
-  demo: 'hello world'
+  demo: 'hello world!@'
 })
 
 useNuxt2Meta({

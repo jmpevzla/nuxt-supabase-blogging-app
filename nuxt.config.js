@@ -23,7 +23,8 @@ export default defineNuxtConfig({
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/styles.css'
+    //'@/assets/css/styles.css'
+    '@/assets/css/tailwind.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -53,11 +54,11 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
+    // postcss: {
+    //   plugins: {
+    //     tailwindcss: {},
+    //     autoprefixer: {},
+    //   },
+    // },
   }
 })
