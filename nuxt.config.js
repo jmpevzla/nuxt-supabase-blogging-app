@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'template',
+    title: 'Blogging App!',
     htmlAttrs: {
       lang: 'en'
     },
@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/styles.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -52,5 +53,11 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   }
 })

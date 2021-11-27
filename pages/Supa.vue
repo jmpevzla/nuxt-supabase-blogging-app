@@ -1,7 +1,7 @@
 <template>
   <div>
-    <table border="1">
-      <thead>
+    <table class="border-2">
+      <thead class="border border-black">
         <tr>
           <th>Id</th>
           <th>UserName</th>
