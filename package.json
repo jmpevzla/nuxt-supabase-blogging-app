@@ -13,7 +13,8 @@
     "core-js": "^3.15.1",
     "nuxt-edge": "latest",
     "nuxt-supabase": "^2.2.1",
-    "vue-fragment": "^1.5.2"
+    "vue-fragment": "^1.5.2",
+    "vue-simplemde": "^2.0.0"
   },
   "devDependencies": {
     "@nuxt/bridge": "npm:@nuxt/bridge-edge",

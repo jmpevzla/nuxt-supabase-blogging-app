@@ -24,12 +24,14 @@ export default defineNuxtConfig({
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     //'@/assets/css/styles.css'
-    '@/assets/css/tailwind.min.css'
+    'simplemde/dist/simplemde.min.css',
+    '@/assets/css/tailwind.min.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/fragment.client.js'
+    '@/plugins/fragment.client.js',
+    { src: '~plugins/simplemde.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
