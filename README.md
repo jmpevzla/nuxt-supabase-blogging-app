@@ -9,5 +9,6 @@
 
 ## Based in:
 
-https://github.com/dabit3/nuxt-supabase-full-multi-user-blog
-https://css-tricks.com/using-nuxt-and-supabase-for-a-multi-user-blogging-app/
+> https://github.com/dabit3/nuxt-supabase-full-multi-user-blog
+
+> https://css-tricks.com/using-nuxt-and-supabase-for-a-multi-user-blogging-app/
