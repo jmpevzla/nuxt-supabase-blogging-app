@@ -56,11 +56,19 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true
     // postcss: {
     //   plugins: {
     //     tailwindcss: {},
     //     autoprefixer: {},
     //   },
     // },
+  },
+  render: {
+    // bundleRenderer: {
+    //   shouldPreload: (file, type) => {
+    //     return ['script', 'style', 'font'].includes(type)
+    //   }
+    // }
   }
 })

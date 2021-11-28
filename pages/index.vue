@@ -9,26 +9,52 @@
       </NuxtLink>
     </div>
     <h1 v-if="loaded && !posts.length" class="text-2xl">No posts...</h1>
+    <h2 v-if="!loaded" class="text-2xl text-center">Loading ...</h2>
   </main>
 </template>
 
 <script>
+import { onMounted, getCurrentInstance, useNuxtApp, ref } from '#app'
+
+const getData = async ($supabase) => {
+  const { data: posts, error } = await $supabase
+    .from('posts')
+    .select('*')
+
+  return { posts }
+}
+
 export default {
   async asyncData({ $supabase }) {
+    if (process.server){
+      const { posts } = await getData($supabase)
 
-    const { data: posts, error } = await $supabase
-      .from('posts')
-      .select('*')
-
-    return {
-      posts,
-      loaded: true
+      return {
+        posts,
+        loaded: true
+      }
     }
+    return {}
   },
   data() {
     return {
       loaded: false,
       posts: []
+    }
+  },
+  setup() {
+    const {
+      $supabase
+    } = useNuxtApp().nuxt2Context.app
+
+    const page = getCurrentInstance()
+
+    onMounted(async () => {
+      const { posts } = await getData($supabase)
+      page.data.posts = posts
+      page.data.loaded = true
+    })
+    return {
     }
   }
 }
