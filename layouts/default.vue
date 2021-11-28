@@ -41,7 +41,7 @@ onMounted(() => {
   /* When the app loads, check to see if the user is signed in */
   /* also create a listener for when someone signs in or out */
   const { data: authList } = $supabase.auth.onAuthStateChange(
-    () => this.checkUser()
+    () => checkUser()
   )
   authListener.value = authList
   checkUser()
